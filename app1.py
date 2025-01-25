@@ -6,11 +6,11 @@ from sklearn.metrics import mean_squared_error
 from flask import Flask, jsonify, request
 
 # Load data
-folate_data = pd.read_sas("C:\\Users\\kalen\\Downloads\\FOLATE_J.xpt")
-vitamin_d_data = pd.read_sas("C:\\Users\\kalen\\Downloads\\VID_J (1).xpt")
-demographics_data = pd.read_sas("C:\\Users\\kalen\\Downloads\\DEMO_J (1).xpt")
-diet_day1 = pd.read_sas("C:\\Users\\kalen\\Downloads\\DR1TOT_J (1).xpt")
-diet_day2 = pd.read_sas("C:\\Users\\kalen\\Downloads\\DR2TOT_J (2).xpt")
+folate_data = pd.read_sas(FOLATE_J.xpt)
+vitamin_d_data = pd.read_sas(VID_J (1).xpt)
+demographics_data = pd.read_sas(DEMO_J (1).xpt)
+diet_day1 = pd.read_sas(DR1TOT_J (1).xpt)
+diet_day2 = pd.read_sas(DR2TOT_J (2).xpt)
 
 # Preprocess folate data
 folate_data['LBDRFO'] = folate_data['LBDRFOSI'] / 2.265
