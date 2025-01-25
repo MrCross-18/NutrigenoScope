@@ -97,8 +97,19 @@ def predict():
 
 import os
 
+import os
+from flask import Flask
+
+app = Flask(__name__)
+
+# Define a route for the home page
+@app.route('/')
+def home():
+    return "Welcome to NutrigenoScope!"
+
 if __name__ == '__main__':
-    # Use the port specified by the environment variable, or default to 5000
+    # Get the port from the environment variable or default to 5000
     port = int(os.environ.get('PORT', 5000))
-    app.run(debug=True, host='0.0.0.0', port=port)
+    # Run the app, binding to all interfaces with `host='0.0.0.0'`
+    app.run(debug=False, host='0.0.0.0', port=port)
 
