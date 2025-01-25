@@ -1,6 +1,0 @@
-catboost
-sklearn
-scikit-learn
-numpy
-pandas
-flask
