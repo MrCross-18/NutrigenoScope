@@ -62,7 +62,7 @@ app = Flask(__name__)
 
 # Nutrient tracking and food recommendation
 def load_day1_data():
-    return pd.read_sas("C:\\Users\\kalen\\Downloads\\DR1IFF_J.xpt")
+    return pd.read_sas(DR1IFF_J.csv)
 
 def recommend_foods(nutrient, threshold, day1_data):
     recommended = day1_data[day1_data[nutrient] > threshold]
